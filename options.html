@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Facebook Keyword Remover options</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container > * + * {
+      margin-top: 16px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div>Comma-delimited keywords to be.</div>
+      <textarea id="keywords"></textarea>
+
+      <div id="status"></div>
+      <button id="save">Save</button>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
