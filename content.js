@@ -22,14 +22,11 @@ chrome.storage.sync.get(
           content?.innerText &&
           new RegExp(`(${keywords.join("|")})`).test(content.innerText.toLowerCase())
         ) {
-          console.log('content', content.innerText);
-          console.log('removed')
           root.parentElement.removeChild(root);
         }
       });
 
     const mo = new MutationObserver((list) => {
-      console.log(list);
       removeKeywords();
     });
 
