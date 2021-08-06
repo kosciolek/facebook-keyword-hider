@@ -1,6 +1,6 @@
 {
   "name": "Facebook Keyword Remover",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Remove feed posts with unwanted words.",
   "manifest_version": 2,
   "permissions": [
