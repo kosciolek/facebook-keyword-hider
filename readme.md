@@ -1,7 +1,10 @@
+# Facebook Keyword Hider
+
 Remove feed posts with unwanted keywords.
 
-Keywords may be set at the extension's page options.
+# Settings
 
+Keywords may be set at the extension's page options.
 
 # Installation
 
