@@ -9,6 +9,8 @@ chrome.storage.sync.get(
       `Facebook Keyword Remover - Keywords loaded: [${keywords.join(", ")}]`
     );
 
+    if (!keywords.length) return;
+
     const feed = document.querySelector("[role=feed]");
 
     const removeKeywords = () =>
@@ -20,11 +22,16 @@ chrome.storage.sync.get(
           content?.innerText &&
           new RegExp(`(${keywords.join("|")})`).test(content.innerText.toLowerCase())
         ) {
+          console.log('content', content.innerText);
+          console.log('removed')
           root.parentElement.removeChild(root);
         }
       });
 
-    const mo = new MutationObserver(removeKeywords);
+    const mo = new MutationObserver((list) => {
+      console.log(list);
+      removeKeywords();
+    });
 
     removeKeywords();
 
